@@ -23,10 +23,10 @@ jobs:
          password: ${{ secrets.DOCKERHUB_TOKEN }}
     
     - name: Docker image Build and Push 
-      run:
+      run: |
         commit_id=$(git rev-parse --short HEAD)
         image="${{ secrets.DOCKERHUB_LOGIN }}/simple-calc:$commit_id"
-        docker build . --file Dockerfile --tag "$image"
+        docker build --file Dockerfile --tag "$image" .
         docker images
         docker push "$image"
 
