@@ -31,6 +31,6 @@ jobs:
         docker push "$image"
 
         image_latest="${{ secrets.DOCKERHUB_LOGIN }}/simple-calc:latest"
-        docker tag "$image" "$image_latest" .
+        docker tag "$image" "$image_latest"
         docker images
         docker push "$image_latest"
