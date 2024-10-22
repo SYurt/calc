@@ -33,10 +33,10 @@ jobs:
 
     - name: Build image and Run test
       run: |
-         pull-req-num=${{ github.event.pull_request.number }}
-         calc-image="yurtsweta/calc:pr-${pull-req-num}"
-         docker build --tag "$calc-image" .
+         pull_req_num=${{ github.event.pull_request.number }}
+         calc_image="yurtsweta/calc:pr-${pull_req_num}"
+         docker build --tag "$calc_image" .
          chmod +x e2e-tests.sh
-         ./e2e-tests.sh "$calc-image"
+         ./e2e-tests.sh "$calc_image"
     
  
