@@ -3,13 +3,16 @@
 
 int err_code = 0;
 
+int lintercheck[5];
+lintercheck[6]=8;
+
 double calculate(double num1, double num2, char operation) {
     err_code = 0;
 
     double result;
     switch (operation) {
         case '+':
-            result = num1 + num2;
+            result = num1 + num2 + 1;
             break;
         case '-':
             result = num1 - num2;
