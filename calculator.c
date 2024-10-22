@@ -3,7 +3,8 @@
 
 int err_code = 0;
 
-int lintercheck;
+int lintercheck[5];
+lintercheck[6]=8;
 
 double calculate(double num1, double num2, char operation) {
     err_code = 0;
