@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
                  printf("unknown operation");
                  break;
              case ERR_DIV_BY_ZERO:
-                 printf("devision by 0");
+                 printf("division by 0");
                  break;
          }
          printf("\n");
