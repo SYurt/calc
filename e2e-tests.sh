@@ -26,5 +26,17 @@ if [ "$result" != "$expected" ]; then
     exit 1;
 fi
 
+test_case='12 / 0'
+expected='Error: division by 0'
+
+result=$(test_run "$test_case")
+
+if [ "$result" != "$expected" ]; then
+    echo "Failed for ${test_case}: got ${result}, but expected ${expected}"
+    exit 1;
+fi
+
 echo 'Tests finished successfully'
+
+
 
